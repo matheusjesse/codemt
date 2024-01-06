@@ -1,7 +1,9 @@
+import { ContainerPage } from '@/styles/page';
+
 export default function Home() {
   return (
-    <main>
+    <ContainerPage>
       <div>Home</div>
-    </main>
+    </ContainerPage>
   )
 }

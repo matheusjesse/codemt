@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
-import Head from "next/head";
-
+import StyledComponentsRegistry from './registry'
+import GlobalStyles from '../styles/globals';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +26,12 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c"/>
         <meta name="theme-color" content="#ffffff"></meta>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }
