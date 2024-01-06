@@ -35,6 +35,5 @@ export const ContainerPage = styled.main`
       font-family: 'Lexend', sans-serif;
       font-size: 1.5em;
       line-height: 1.5;
-      tex
    }
 `;
