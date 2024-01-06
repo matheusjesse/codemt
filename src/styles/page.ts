@@ -3,8 +3,34 @@
 import styled from 'styled-components';
 
 export const ContainerPage = styled.main`
-
-    div {
-        color: red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    background: #faf3e0;
+    
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-family: 'Lexend', sans-serif;
+        font-size: 2.5em;
+        margin-bottom: 20px;
     }
+
+    hr {
+        width: 100%;
+        visibility: hidden;
+    }
+
+    p {
+      text-indent: 20px; /* Adiciona um recuo no início de cada parágrafo */
+      max-width: 890px;
+      margin: 0 18px 0 18px;      
+      font-family: 'Lexend', sans-serif;
+      font-size: 1.5em;
+      line-height: 1.5;
+      
+   }
 `;
