@@ -11,6 +11,10 @@ export const ContainerPage = styled.main`
     align-content: center;
     background: #faf3e0;
     
+    .highlight {
+            background-color: #0EB88B; /* Cor de destaque, você pode ajustar conforme necessário */
+            font-weight: bold; /* Estilo de fonte, você pode ajustar conforme necessário */
+    }
     h1 {
         width: 100%;
         text-align: center;
@@ -31,6 +35,6 @@ export const ContainerPage = styled.main`
       font-family: 'Lexend', sans-serif;
       font-size: 1.5em;
       line-height: 1.5;
-      
+      tex
    }
 `;
