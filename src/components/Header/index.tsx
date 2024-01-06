@@ -6,7 +6,7 @@ export default function Header ()
     return(
         <HeaderContainer>
             <div className="logo">
-                <h1>#codeMT</h1>
+                <h1 className="logo-title">#codeMT</h1>
             </div>
             <nav>
                 <ul>

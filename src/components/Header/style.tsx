@@ -10,11 +10,10 @@ export const HeaderContainer = styled.header`
             top: 0;
             z-index: 1000;
             height: 64px;
-            padding: 0 28px 0 28px;
-            
+            padding: 0 28px 0 28px;           
             
 
-            h1 {
+            .logo-title {
                 font-size: 1em;
                 text-align: center;
                 margin: 0px;

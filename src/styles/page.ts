@@ -6,10 +6,9 @@ export const ContainerPage = styled.main`
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    align-content: center;
     background: #faf3e0;
+    padding-top: 134px;
     
     .highlight {
             background-color: #0EB88B; /* Cor de destaque, você pode ajustar conforme necessário */
