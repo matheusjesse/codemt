@@ -7,16 +7,20 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     color: #2c2625;
-
+    flex-wrap: wrap;
+    
     .content-body {
         padding-top: 134px;
-        width: 70%;
-        border: 1px solid #a5a0a0;
-        border-radius: 4px;
-        margin-top: 124px;
+        width: 800px;
+        border-radius: 8px;
+        margin-top: -64px;
         margin-bottom: 124px;
-        padding: 12px;
-        box-shadow: 0px 0px 1px 0px rgba(100, 105, 110, 0.1);
+        padding: 44px 12px 12px 12px;
+        box-shadow: 0px 0px 8px 0px rgba(100, 105, 110, 0.2);
+        background-color: #fff;
+        @media screen and (max-width: 800px) {
+        width: 94%;
+        }
     }
 
     img {
@@ -34,6 +38,7 @@ export const Container = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 614px;
     }
 
     pre code {
@@ -77,4 +82,6 @@ export const Container = styled.div`
         color: #8b8686;
         margin: 18px 0 18px 0;
     }
+
+    
 `;
