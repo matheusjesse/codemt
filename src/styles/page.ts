@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 export const ContainerPage = styled.main`
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
