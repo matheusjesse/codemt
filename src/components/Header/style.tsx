@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
+            width: 90%;
             top: 0;
             z-index: 1000;
             height: 64px;
@@ -17,6 +17,7 @@ export const HeaderContainer = styled.header`
                 font-size: 1em;
                 text-align: center;
                 margin: 0px;
+                font-family: 'Lexend', sans-serif;
             }
 
             ul, ol {

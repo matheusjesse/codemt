@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import { ContainerPage } from '@/styles/page';
 
 export default function Home() {
+  const urlPath = "/posts/githubconfig";
   return (
     <ContainerPage>
       <Header />
@@ -14,7 +15,7 @@ export default function Home() {
       </section>
       <hr/>
       <section>
-        <Card />
+        <Card url={urlPath}/>
       </section>
     </ContainerPage>
   )

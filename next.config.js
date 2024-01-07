@@ -8,8 +8,10 @@ const nextConfig = {
         styledComponents: true,
     },
     pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+    experimental: {
+        mdxRs: true,
+    },
 }
 
-module.exports = nextConfig
 
 module.exports = withMDX(nextConfig)
