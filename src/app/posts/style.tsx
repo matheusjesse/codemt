@@ -6,7 +6,6 @@ export const Container = styled.div`
     width: 100vw;
     display: flex;
     justify-content: center;
-    background: #faf3e0;
     color: #2c2625;
 
     .content-body {
@@ -64,7 +63,7 @@ export const Container = styled.div`
 
     hr {
         margin-bottom: 18px;
-        border-color: #f7f1df;
+        border-color: #ffffff;
     }
 
     p {
