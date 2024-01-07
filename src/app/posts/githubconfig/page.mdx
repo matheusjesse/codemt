@@ -1,6 +1,135 @@
-import Header from '@/components/Header';
+import Header from '@/components/Header'
+import CopyCode from '@/utils/copyCode.tsx'
 
 <Header />
 <div className="content-body"> 
-# Como configurar git
+# Instalando e configurando git + SSH Key
+
+---
+
+## Certifique que o sistema está atualizado
+
+---
+
+```
+sudo apt-get update 
+```
+## Instale o git
+
+---
+
+```bash
+sudo apt install git
+```
+
+
+## Criando uma chave ssh
+
+---
+
+#### __Passo 1: Substitua o email de exemplo com o email que você usa no github__
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+#### __Passo 2: Precione enter para salvar a chave no local padrão__
+
+![nome desejado da imagem](/shh-01.png)
+
+
+#### __Passo 3: Digita uma senha segura ou pressione enter para não usar senha__
+ 
+> se você escolheu usar senha vai ser pedido pra você digitar a senha novamente para confirmar.
+
+![nome desejado da imagem](/shh-02.png)
+
+#### __Passo 4: Se tudo deu certo vai aparece algo parecido com a imagem a seguir:__
+
+![nome desejado da imagem](/shh-04.png)
+
+## incluindo sua chave SSH ao SSH-agent
+
+---
+
+#### Passo1: Iniciando o ssh-agent
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+o resultado será algo __parecido__ com isso:
+> Agent pid 59566
+
+#### Passo2: Adicione sua chave privada ao ssh-agent
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+> caso você tenha configurado uma senha na criação da chave ssh ela será pedida nesse passo 2
+
+## Adicionando sua chave ssh ao seu GitHub
+
+---
+
+#### Passo 1: Copie sua chave pública
+
+```bash
+    cat ~/.ssh/id_ed25519.pub
+```
+
+> copie todo o conteudo que está dentro desse arquivo
+
+#### Passo 2: No github, vá até o canto superior direito e clique na sua foto e em seguida em Settings.
+![nome desejado da imagem](/shh-05.png)
+
+#### Passo 3: No menu lateral que vai aparecer no lado esquerdo da pagina clique em SSH and GPG keys.
+
+![nome desejado da imagem](/shh-06.png)
+
+#### Passo 4: Nessa paga clique em "New SSH key"
+
+#### Passo 5: No campo Title digite o nome para sua chave SSH(Utilize um nome para que você lembre a onde ela está sendo usada).
+
+#### Passo 6: No campo "Key Type" deixe selecionado "Authentication Key"
+
+#### Passo 7: No campo "Key" cole a sua chave pública
+
+#### Passo 9: Clique em Add SSH key
+
+#### Passo 10: Se for solicidado para confirmar o acesso da sua conta faça. 
+
+## Confirme sua identidade
+
+---
+
+> Abra o terminal do seu computador
+    
+#### Passo 1: Substitua o exemplo que está entre aspas pelo sua nome e precione enter.
+    
+```bash
+git config --global user.name "Seu nome"
+```
+
+#### Passo 2: Subistitua o email de exemplo pelo seu email e precione enter.
+
+```bash
+git config --global user.email emailexemple@exemple.com
+```
+
+#### Para saber se foi configurado corretamente você pode digitar os seguintes comando:
+
+```bash
+git config --global user.name
+```
+
+&
+
+```bash
+git config --global user.email 
+```
+
+
 </div>
+
