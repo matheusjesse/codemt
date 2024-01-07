@@ -92,4 +92,9 @@ export const CardContainer = styled.div`
         font-family: 'Lexend', sans-serif;
         cursor: pointer;
     }
+
+    a {
+        text-decoration: none; /* Remove a sublinhado dos links na navegação */
+        color: #f8f5f4;                              
+    }
 `
