@@ -9,6 +9,7 @@ export const CardContainer = styled.div`
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 1px 4px 2px rgba(201, 180, 180, 0.9);
+    
     .innercard {
         background-color: rgba(201, 180, 180, 0.4); /* Cor de fundo com transparência */
         backdrop-filter: blur(10px); /* Desfoque aplicado ao plano de fundo */

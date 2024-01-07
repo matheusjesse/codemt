@@ -3,13 +3,14 @@
 import styled from 'styled-components';
 
 export const ContainerPage = styled.main`
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background: #faf3e0;
     padding-top: 134px;
-    
+    align-content: flex-start;
+
     .highlight {
             background-color: #0EB88B; /* Cor de destaque, você pode ajustar conforme necessário */
             font-weight: bold; /* Estilo de fonte, você pode ajustar conforme necessário */
@@ -34,5 +35,11 @@ export const ContainerPage = styled.main`
       font-family: 'Lexend', sans-serif;
       font-size: 1.5em;
       line-height: 1.5;
+   }
+
+   .card-section {
+    max-width: 890px;
+    margin-top: 84px;
+    margin-bottom: 84px;
    }
 `;

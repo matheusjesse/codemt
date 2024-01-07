@@ -4,6 +4,7 @@ import { ContainerPage } from '@/styles/page';
 
 export default function Home() {
   const urlPath = "/posts/githubconfig";
+  const gitHubGuideText = "Como instalar o git no seu computador, criar chave SSH e linkar com sua conta no github."
   return (
     <ContainerPage>
       <Header />
@@ -14,8 +15,8 @@ export default function Home() {
         <p>Então, dê uma olhada e aproveite para aprender. E fique ligado, porque sempre há novidades por aqui!</p>
       </section>
       <hr/>
-      <section>
-        <Card url={urlPath}/>
+      <section className='card-section'>
+        <Card url={urlPath} title="Git Hub" tags={["git", "linux"]} text={gitHubGuideText}/>
       </section>
     </ContainerPage>
   )
