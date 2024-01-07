@@ -17,6 +17,7 @@ export default function Home() {
       <hr/>
       <section className='card-section'>
         <Card url={urlPath} title="Git Hub" tags={["git", "linux"]} text={gitHubGuideText}/>
+        
       </section>
     </ContainerPage>
   )

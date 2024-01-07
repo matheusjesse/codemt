@@ -3,17 +3,21 @@
 import styled from 'styled-components';
 
 export const ContainerPage = styled.main`
-    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background: #faf3e0;
     padding-top: 134px;
-    align-content: flex-start;
-
+    align-content: center;
     .highlight {
-            background-color: #0EB88B; /* Cor de destaque, você pode ajustar conforme necessário */
-            font-weight: bold; /* Estilo de fonte, você pode ajustar conforme necessário */
+            background-color: #0EB88B;
+            font-weight: bold; 
+    }
+
+    main {
+        background: #faf3e0;
     }
     h1 {
         width: 100%;
@@ -38,8 +42,22 @@ export const ContainerPage = styled.main`
    }
 
    .card-section {
-    max-width: 890px;
-    margin-top: 84px;
+    max-width: 624px;
+    padding-top: 84px;
+    background: #faf3e0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
     margin-bottom: 84px;
-   }
+    @media screen and (max-width: 690px) {            
+        max-width: 412px;
+    }
+    @media screen and (max-width: 440px) {            
+        max-width: 200px;
+    }    
+
+    }
+
+   
 `;
