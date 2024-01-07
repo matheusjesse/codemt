@@ -5,7 +5,7 @@ import styled from "styled-components"
 export const CardContainer = styled.div`
     width: 200px;
     height: 280px;
-    background: linear-gradient(180deg, #29DFAF 0%, #7D4CBB 32.5%, #1FA383 100%);
+    background: linear-gradient(120deg, #29DFAF 4%, #7D4CBB 38.5%, #1FA383 100%);
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 1px 4px 2px rgba(201, 180, 180, 0.9);
@@ -95,6 +95,6 @@ export const CardContainer = styled.div`
 
     a {
         text-decoration: none; /* Remove a sublinhado dos links na navegação */
-        color: #f8f5f4;                              
+        color: #f8f5f4;;                              
     }
 `
