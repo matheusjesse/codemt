@@ -8,16 +8,16 @@ export const ContainerPage = styled.main`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: #faf3e0;
+    background: ${({ theme }) => theme.bgColor};
     padding-top: 134px;
     align-content: center;
     .highlight {
-            background-color: #0EB88B;
+            background-color: ${({ theme }) => theme.highLight};
             font-weight: bold; 
     }
 
     main {
-        background: #faf3e0;
+        background: ${({ theme }) => theme.bgColor};
     }
     h1 {
         width: 100%;
@@ -44,7 +44,7 @@ export const ContainerPage = styled.main`
    .card-section {
     max-width: 624px;
     padding-top: 84px;
-    background: #faf3e0;
+    background: ${({ theme }) => theme.bgColor};
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

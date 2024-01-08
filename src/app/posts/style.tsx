@@ -6,7 +6,8 @@ export const Container = styled.div`
     width: 100vw;
     display: flex;
     justify-content: center;
-    color: #2c2625;
+    color: #${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.bgTutorial};
     flex-wrap: wrap;
     
     .content-body {
@@ -16,8 +17,8 @@ export const Container = styled.div`
         margin-top: -64px;
         margin-bottom: 124px;
         padding: 44px 12px 12px 12px;
-        box-shadow: 0px 0px 8px 0px rgba(100, 105, 110, 0.2);
-        background-color: #fff;
+        box-shadow: 0px -1px 8px 0px ${({ theme }) => theme.shadowColor};
+        background-color: ${({ theme }) => theme.fgTutorial};
         @media screen and (max-width: 800px) {
         width: 94%;
         }
@@ -29,7 +30,7 @@ export const Container = styled.div`
     }
 
     pre {
-        background-color: #f5f1f1;
+        background-color: ${({ theme }) => theme.bgCode};
         padding: 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -42,7 +43,7 @@ export const Container = styled.div`
     }
 
     pre code {
-        color: #333;
+        color: ${({ theme }) => theme.text};
         font-family: 'Courier New', Courier, monospace;
         font-size: 14px;
         line-height: 1.5;
@@ -68,7 +69,8 @@ export const Container = styled.div`
 
     hr {
         margin-bottom: 18px;
-        border-color: #ffffff;
+        border-color: ${({ theme }) => theme.lineColor};
+        
     }
 
     p {
@@ -79,7 +81,7 @@ export const Container = styled.div`
     blockquote {
         border-left: 3px solid #444242;
         padding-left: 8px;
-        color: #8b8686;
+        color: #aca9a9;
         margin: 18px 0 18px 0;
     }
 

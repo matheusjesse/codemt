@@ -8,7 +8,7 @@ export const CardContainer = styled.div`
     background: linear-gradient(120deg, #29DFAF 4%, #7D4CBB 38.5%, #1FA383 100%);
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: 1px 1px 4px 2px rgba(201, 180, 180, 0.9);
+    box-shadow: 1px 1px 8px 0px ${({ theme }) => theme.shadowColor};
     
     .innercard {
         background-color: rgba(201, 180, 180, 0.4); /* Cor de fundo com transparência */

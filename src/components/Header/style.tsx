@@ -28,7 +28,7 @@ export const HeaderContainer = styled.header`
 
             a {
                 text-decoration: none; /* Remove a sublinhado dos links na navegação */
-                color: black;
+                color: ${({ theme }) => theme.text};;
                               
             }
         
@@ -42,14 +42,15 @@ export const HeaderContainer = styled.header`
                 font-family: 'Lexend', sans-serif;
                 font-size: 0.9em;
                 border-radius: 6px; 
-                border: 2px solid #0EB88B; 
+                border: 2px solid ${({ theme }) => theme.highLight}; 
                 font-weight: 500;    
                 transition: background-color 0.4s ease-out;    
+                margin: 28px;
             }
 
             li:hover {
                 //box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.2);
-                background-color: #0EB88B; ;
+                background-color: ${({ theme }) => theme.highLight} ;
             }
             
             
