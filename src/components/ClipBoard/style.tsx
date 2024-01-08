@@ -9,7 +9,7 @@ export const ClipBoardContainer = styled.div`
         border: none;
         display: flex;
         align-items: center;
-
+        cursor: pointer;
     }
 
     .default-image { 

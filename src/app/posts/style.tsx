@@ -32,7 +32,7 @@ export const Container = styled.div`
     pre {
         background-color: ${({ theme }) => theme.bgCode};
         padding: 15px;
-        border: 1px solid #ccc;
+        border: 1px solid ${({ theme }) => theme.codeLine};
         border-radius: 5px;
         overflow-x: auto;        
         margin-bottom: 24px;
@@ -69,8 +69,7 @@ export const Container = styled.div`
 
     hr {
         margin-bottom: 18px;
-        border-color: ${({ theme }) => theme.lineColor};
-        
+        border-color: ${({ theme }) => theme.lineColor};        
     }
 
     p {

@@ -8,8 +8,9 @@ export const lightTheme = {
   bgTutorial: '#fff',
   fgTutorial: '#fff',
   bgCode: '#f7f5f4',
-  lineColor: '#fff',
-  shadowColor: 'rgba(107, 101, 110, 0.6)'
+  lineColor: 'rgba(255, 255, 255, 0.4)',
+  shadowColor: 'rgba(107, 101, 110, 0.6)',
+  codeLine: '#ccc',
 };
 
 export const darkTheme = {
@@ -19,8 +20,9 @@ export const darkTheme = {
   bgTutorial: '#0f0e0e',
   fgTutorial: '#1b1919',
   bgCode: '#333135',
-  lineColor: 'rgba(11, 10, 12, 0.5)',
-  shadowColor: 'rgba(0, 0, 0, 0.8)'
+  lineColor: 'rgba(22, 21, 21, 0.6)',
+  shadowColor: 'rgba(0, 0, 0, 0.8)',
+  codeLine: '#686666',
 };
 
 const GlobalStyles = createGlobalStyle`
