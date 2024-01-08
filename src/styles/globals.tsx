@@ -3,8 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import { Lexend } from 'next/font/google';
 
-const lexend = Lexend({
-  weight: ['300', '400', '500'],
+const lexend = Lexend({  
   subsets: ['latin']
 })
 
