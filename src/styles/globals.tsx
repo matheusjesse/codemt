@@ -1,6 +1,17 @@
 'use client'
 import { createGlobalStyle } from 'styled-components';
 
+import { Lexend } from 'next/font/google';
+
+const lexend = Lexend({
+  weight: ['300', '400', '500'],
+  subsets: ['latin']
+})
+
+export const mainFont = {
+  lexend: lexend.style.fontFamily
+}
+
 export const lightTheme = {
   bgColor: '#FAF3E0',
   text: '#0E1311',
@@ -52,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
   background-color: #0EB88B;
   width: 40px;
   height: 28px;
-  font-family: 'Lexend', sans-serif;
+  font-family: ${mainFont.lexend};
   border-radius: 4px;
   padding-top: 5px;
   font-weight: 500;
@@ -63,7 +74,7 @@ const GlobalStyles = createGlobalStyle`
   background-color: #a06ce4;
   width: 40px;
   height: 28px;
-  font-family: 'Lexend', sans-serif;
+  font-family: ${mainFont.lexend};
   border-radius: 4px;
   padding-top: 5px;
   font-weight: 500;

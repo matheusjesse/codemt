@@ -1,5 +1,6 @@
 'use client'
 import styled from "styled-components";
+import { mainFont } from '@/styles/globals';
 
 export const HeaderContainer = styled.header`
             position: fixed;
@@ -17,7 +18,7 @@ export const HeaderContainer = styled.header`
                 font-size: 1em;
                 text-align: center;
                 margin: 0px;
-                font-family: 'Lexend', sans-serif;
+                font-family: ${mainFont.lexend};
             }
 
             ul, ol {
@@ -39,7 +40,7 @@ export const HeaderContainer = styled.header`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-family: 'Lexend', sans-serif;
+                font-family: ${mainFont.lexend};
                 font-size: 0.9em;
                 border-radius: 6px; 
                 border: 2px solid ${({ theme }) => theme.highLight}; 

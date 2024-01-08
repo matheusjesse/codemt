@@ -1,6 +1,7 @@
 'use client'
 
 import styled from "styled-components"
+import { mainFont } from '@/styles/globals';
 
 export const CardContainer = styled.div`
     width: 200px;
@@ -71,7 +72,7 @@ export const CardContainer = styled.div`
     .tags {
         border: 2px solid #f8f5f4;
         border-radius: 4px;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
         min-width: 34px;
         height: 18px;
         font-size: 12px;
@@ -89,7 +90,7 @@ export const CardContainer = styled.div`
         align-items: center;
         justify-content: center;
         margin-top: 12px;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
         cursor: pointer;
     }
 

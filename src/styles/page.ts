@@ -1,6 +1,7 @@
 'use client'
 
 import styled from 'styled-components';
+import { mainFont } from './globals';
 
 export const ContainerPage = styled.main`
     min-height: 100vh;
@@ -22,7 +23,7 @@ export const ContainerPage = styled.main`
     h1 {
         width: 100%;
         text-align: center;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
         font-size: 2.5em;
         margin-bottom: 20px;
     }
@@ -36,7 +37,7 @@ export const ContainerPage = styled.main`
       text-indent: 20px; /* Adiciona um recuo no início de cada parágrafo */
       max-width: 890px;
       margin: 0 18px 0 18px;      
-      font-family: 'Lexend', sans-serif;
+      font-family: ${mainFont.lexend};
       font-size: 1.5em;
       line-height: 1.5;
    }

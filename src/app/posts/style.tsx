@@ -1,6 +1,7 @@
 'use client'
 
 import styled from "styled-components";
+import { mainFont } from "@/styles/globals";
 
 export const Container = styled.div`
     width: 100vw;
@@ -51,19 +52,19 @@ export const Container = styled.div`
 
     h1 {
         margin-bottom: 34px;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
     }
 
     h2 {
         margin-bottom: 12px;
         
         margin-top: 28px;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
     }
 
     h4 {
         margin-bottom: 14px;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
         
     }
 
@@ -74,7 +75,7 @@ export const Container = styled.div`
 
     p {
         margin: 4px 0 12px 0;
-        font-family: 'Lexend', sans-serif;
+        font-family: ${mainFont.lexend};
     }
 
     blockquote {
