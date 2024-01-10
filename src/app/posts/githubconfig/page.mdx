@@ -18,7 +18,9 @@ export const metadata = {
 
 ---
 
-<ClipBoard codeText="sudo apt-get update" />
+<ClipBoard codeText={`sudo apt-get update
+
+`} />
 
 
 ## Instale o git
@@ -26,7 +28,9 @@ export const metadata = {
 ---
 
 
-<ClipBoard codeText="sudo apt install git" />
+<ClipBoard codeText={`sudo apt install git
+
+`} />
 
 
 ## Criando uma chave ssh
@@ -35,7 +39,9 @@ export const metadata = {
 
 #### __Passo 1: Substitua o email de exemplo com o email que você usa no github__
 
-<ClipBoard codeText='ssh-keygen -t ed25519 -C "your_email@example.com"' />
+<ClipBoard codeText={`ssh-keygen -t ed25519 -C "your_email@example.com"
+
+`} />
 
 #### __Passo 2: Precione enter para salvar a chave no local padrão__
 
@@ -58,7 +64,9 @@ export const metadata = {
 
 #### Passo1: Iniciando o ssh-agent
 
-<ClipBoard codeText='eval "$(ssh-agent -s)"' />
+<ClipBoard codeText={`eval "$(ssh-agent -s)"
+
+`} />
 
 
 o resultado será algo __parecido__ com isso:
@@ -66,7 +74,9 @@ o resultado será algo __parecido__ com isso:
 
 #### Passo2: Adicione sua chave privada ao ssh-agent
 
-<ClipBoard codeText="ssh-add ~/.ssh/id_ed25519" />
+<ClipBoard codeText={`ssh-add ~/.ssh/id_ed25519
+
+`} />
 
 > caso você tenha configurado uma senha na criação da chave ssh ela será pedida nesse passo 2
 
@@ -76,7 +86,9 @@ o resultado será algo __parecido__ com isso:
 
 #### Passo 1: Copie sua chave pública
 
-<ClipBoard codeText="cat ~/.ssh/id_ed25519.pub" />
+<ClipBoard codeText={`cat ~/.ssh/id_ed25519.pub
+
+`} />
 
 > copie todo o conteudo que está dentro desse arquivo
 
@@ -107,19 +119,27 @@ o resultado será algo __parecido__ com isso:
     
 #### Passo 1: Substitua o exemplo que está entre aspas pelo sua nome e precione enter.
     
-<ClipBoard codeText='git config --global user.name "Seu nome"' />
+<ClipBoard codeText={`git config --global user.name "Seu nome"
+
+`} />
 
 #### Passo 2: Subistitua o email de exemplo pelo seu email e precione enter.
 
-<ClipBoard codeText="git config --global user.email emailexemple@exemple.com" />
+<ClipBoard codeText={`git config --global user.email emailexemple@exemple.com
+
+`} />
 
 #### Para saber se foi configurado corretamente você pode digitar os seguintes comando:
 
-<ClipBoard codeText="git config --global user.name" />
+<ClipBoard codeText={`git config --global user.name
+
+`} />
 
 &
 
-<ClipBoard codeText="git config --global user.email" />
+<ClipBoard codeText={`git config --global user.email
+
+`} />
 
 
 > Autor: matheus 
