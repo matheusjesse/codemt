@@ -88,5 +88,11 @@ export const Container = styled.div`
         margin: 18px 0 18px 0;
     }
 
+    a {
+        color: #494bda;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
     
 `;
