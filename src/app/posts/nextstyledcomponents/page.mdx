@@ -16,9 +16,12 @@ export const metadata = {
 
 ## Inicie um projeto com Next
 
-```bash
-npx create-next-app@latest
-````
+
+
+<ClipBoard codeText={`npx create-next-app@latest`} />
+
+
+
 
 ## Na instalação vai aparecer as seguintes opções
 
@@ -59,23 +62,22 @@ What import alias would you like configured? @/*
 
 #### Instale o style-components no seu projeti
 
-```bash
-npm install --save styled-components
-```
+<ClipBoard codeText={`npm install --save styled-components`} />
 
 #### Ative o Styled-Components no arquivo next.config.js
 
-```
+<ClipBoard codeText={`
 module.exports = {
   compiler: {
     styledComponents: true,
   },
 }
-```
+
+`} />
 
 > O seu arquivo next.config vai ficar dessa forma:
 
-```
+<ClipBoard codeText={`
 /** @type {import('next').NextConfig} */
 const nextConfig = module.exports = {
     compiler: {
@@ -85,12 +87,12 @@ const nextConfig = module.exports = {
 
 module.exports = nextConfig
 
-```
+`}/>
 
 
 #### Crie o arquivo registry.tsx dentro da pasta app
 
-```
+<ClipBoard codeText={`
 'use client'
  
 import React, { useState } from 'react'
@@ -118,13 +120,13 @@ export default function StyledComponentsRegistry({
     </StyleSheetManager>
   )
 }
-```
+`}/>
 
 #### Envolva a "children" do arquivo layout.tsx que está dentro da pasta app com StyledComponentsRegistry
 
 >Depois desse passo o styled-components estará configurado.
 
-```
+<ClipBoard codeText={`
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from './registry'
 
@@ -149,8 +151,7 @@ export default function RootLayout({
   )
 }
 
-
-```
+`}/>
 
 
 ## Configurando o global css
@@ -159,11 +160,11 @@ export default function RootLayout({
 
 #### Passo 2: Dentro da pasta styles que você acabou de criar inclua o arquivo globals.tsx
 
-```
+<ClipBoard codeText={`
 'use client'
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle\`
 
 * {
   box-sizing: border-box;
@@ -175,15 +176,17 @@ html,
 body {
   max-width: 100vw;
 }
-`;
+\`;
 
 export default GlobalStyles;
-```
+
+`} /> 
 
 #### Passo 3: Importe o components GlobalStyles dentro do arquivo layoyt.tsx que está dentro da pasta app
 
 > Seu arquivo ficará parecido com isso:
-```
+
+<ClipBoard codeText={`
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from './registry'
 import GlobalStyles from '@/styles/globals'
@@ -210,13 +213,13 @@ export default function RootLayout({
   )
 }
 
-```
+`} /> 
 
 ## Testando se o Styled-Components está funcionando
 
 #### Dentro do arquivo page.tsx dentro da pasta app cole o código a seguir:
 
-```
+<ClipBoard codeText={`
 import { PageContainer } from "@/styles/page";
 
 export default function Home() {
@@ -230,15 +233,15 @@ export default function Home() {
   )
 }
 
-```
+`} /> 
 
 #### dentro da pasta styles crie o arquivo page.tsx e cole o código a seguir:
 
-```
+<ClipBoard codeText={`
 'use client'
 import styled from 'styled-components'
 
-export const PageContainer = styled.main`
+export const PageContainer = styled.main\`
     height: 100vh;
     background-color: black;
     display: flex;
@@ -254,8 +257,9 @@ export const PageContainer = styled.main`
 
     }
 
-`;
-```
+\`;
+
+`} /> 
 
 #### rode o comando "npm run dev"
 > sua pagina principal ficará assim:
