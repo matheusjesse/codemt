@@ -5,7 +5,7 @@ import { ContainerPage } from '@/styles/page';
 export default function Home() {
   const urlPathGitConfig = "/posts/githubconfig";
   const gitHubGuideText = "Como instalar o git no seu computador, criar chave SSH e linkar com sua conta no github."
-  const urlPathNextStyledComponents = '/post/nextstyledcomponents';
+  const urlPathNextStyledComponents = '/posts/nextstyledcomponents';
   const StyledGuideText = "Como Iniciar um projeto Next.js com Styled-Components e TypeScript"
   return (
     <ContainerPage>
