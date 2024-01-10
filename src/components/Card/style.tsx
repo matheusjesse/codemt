@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 1px 8px 0px ${({ theme }) => theme.shadowColor};
-    
+    flex-wrap: wrap;
     .innercard {
         background-color: rgba(201, 180, 180, 0.4); /* Cor de fundo com transparência */
         backdrop-filter: blur(10px); /* Desfoque aplicado ao plano de fundo */
@@ -58,6 +58,7 @@ export const CardContainer = styled.div`
     .title-card h1 {
         margin: 0;
         color: #f8f5f4;
+        font-size: 1.8em;
     }
 
     .tags-container {
@@ -67,6 +68,9 @@ export const CardContainer = styled.div`
         align-items: center;
         padding: 0 8px 0 8px;
         justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 14px;
+        gap: 4px;
     }
 
     .tags {
