@@ -3,8 +3,10 @@ import Header from '@/components/Header';
 import { ContainerPage } from '@/styles/page';
 
 export default function Home() {
-  const urlPath = "/posts/githubconfig";
+  const urlPathGitConfig = "/posts/githubconfig";
   const gitHubGuideText = "Como instalar o git no seu computador, criar chave SSH e linkar com sua conta no github."
+  const urlPathNextStyledComponents = '/post/nextstyledcomponents';
+  const StyledGuideText = "Como Iniciar um projeto Next.js com Styled-Components e TypeScript"
   return (
     <ContainerPage>
       <Header />
@@ -16,8 +18,8 @@ export default function Home() {
       </section>
       <hr/>
       <section className='card-section'>
-        <Card url={urlPath} title="Git Hub" tags={["git", "linux"]} text={gitHubGuideText}/>
-        
+        <Card url={urlPathGitConfig} title="Git Hub" tags={["git", "linux"]} text={gitHubGuideText}/>
+        <Card url={urlPathNextStyledComponents} title="Styled-Components" tags={["Next.js", "Styled-Components", "TypeScript"]} text={StyledGuideText}/>
       </section>
     </ContainerPage>
   )
