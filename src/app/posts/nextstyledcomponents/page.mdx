@@ -18,7 +18,9 @@ export const metadata = {
 
 
 
-<ClipBoard codeText={`npx create-next-app@latest`} />
+<ClipBoard codeText={`npx create-next-app@latest
+
+`} />
 
 
 
@@ -62,12 +64,13 @@ What import alias would you like configured? @/*
 
 #### Instale o style-components no seu projeti
 
-<ClipBoard codeText={`npm install --save styled-components`} />
+<ClipBoard codeText={`npm install --save styled-components
+
+`} />
 
 #### Ative o Styled-Components no arquivo next.config.js
 
-<ClipBoard codeText={`
-module.exports = {
+<ClipBoard codeText={`module.exports = {
   compiler: {
     styledComponents: true,
   },
@@ -77,8 +80,7 @@ module.exports = {
 
 > O seu arquivo next.config vai ficar dessa forma:
 
-<ClipBoard codeText={`
-/** @type {import('next').NextConfig} */
+<ClipBoard codeText={`/** @type {import('next').NextConfig} */
 const nextConfig = module.exports = {
     compiler: {
       styledComponents: true,
@@ -92,8 +94,7 @@ module.exports = nextConfig
 
 #### Crie o arquivo registry.tsx dentro da pasta app
 
-<ClipBoard codeText={`
-'use client'
+<ClipBoard codeText={`'use client'
  
 import React, { useState } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
@@ -126,8 +127,7 @@ export default function StyledComponentsRegistry({
 
 >Depois desse passo o styled-components estará configurado.
 
-<ClipBoard codeText={`
-import type { Metadata } from 'next'
+<ClipBoard codeText={`import type { Metadata } from 'next'
 import StyledComponentsRegistry from './registry'
 
 export const metadata: Metadata = {
@@ -160,8 +160,7 @@ export default function RootLayout({
 
 #### Passo 2: Dentro da pasta styles que você acabou de criar inclua o arquivo globals.tsx
 
-<ClipBoard codeText={`
-'use client'
+<ClipBoard codeText={`'use client'
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle\`
@@ -186,8 +185,7 @@ export default GlobalStyles;
 
 > Seu arquivo ficará parecido com isso:
 
-<ClipBoard codeText={`
-import type { Metadata } from 'next'
+<ClipBoard codeText={`import type { Metadata } from 'next'
 import StyledComponentsRegistry from './registry'
 import GlobalStyles from '@/styles/globals'
 
@@ -219,8 +217,7 @@ export default function RootLayout({
 
 #### Dentro do arquivo page.tsx dentro da pasta app cole o código a seguir:
 
-<ClipBoard codeText={`
-import { PageContainer } from "@/styles/page";
+<ClipBoard codeText={`import { PageContainer } from "@/styles/page";
 
 export default function Home() {
   return (
@@ -237,8 +234,7 @@ export default function Home() {
 
 #### dentro da pasta styles crie o arquivo page.tsx e cole o código a seguir:
 
-<ClipBoard codeText={`
-'use client'
+<ClipBoard codeText={`'use client'
 import styled from 'styled-components'
 
 export const PageContainer = styled.main\`
