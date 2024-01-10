@@ -18,11 +18,14 @@ export const BannerContainer = styled.div`
         margin: 0 20% 0 20%;
         margin-top: 124px;
         font-family: 'Lexend', sans-serif;
-        font-size: 4em;
+        font-size: 3.7em;
         color: #faf3e0;
         @media screen and (max-width: 800px) {
             margin: 124px 0 0 24px ;
             font-size: 2em;
+        }
+        @media screen and (max-width: 1314px) {        
+            font-size: 3em;       
         }
     }
 

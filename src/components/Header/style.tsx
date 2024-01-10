@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
             
 
             .logo-title {
-                font-size: 1em;
+                font-size: 1em;                
                 text-align: center;
                 margin: 0px;
                 font-family: ${mainFont.lexend};
