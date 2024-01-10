@@ -40,14 +40,17 @@ export default function ClipBoard ({codeText}: propCode) {
 
     return(
         <ClipBoardContainer>
-            <pre>
-                <code>
-                    {codeText}
-                </code>
+            <div className='clip-button-container'>
                 <button className='clip-board-button' onClick={copyToClipboard}>
                     {copiado && (<span className='tooltip'>Copiado!</span>) }
                     {!copiado ? defaultImage() : confirmImage()}
                 </button>
+            </div>
+            <pre>
+                <code>
+                    {codeText}
+                </code>
+                
             </pre>
         </ClipBoardContainer>
     )

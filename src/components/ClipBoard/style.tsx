@@ -4,13 +4,24 @@ import styled from 'styled-components'
 export const ClipBoardContainer = styled.div`
 
 
+    .clip-button-container {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        background-color: ${({ theme }) => theme.bgCode};   
+        border-top: 1px solid ${({ theme }) => theme.codeLine};
+        border-left: 1px solid ${({ theme }) => theme.codeLine};
+        border-right: 1px solid ${({ theme }) => theme.codeLine};
+        border-radius: 4px 4px 0 0;
+    }
     .clip-board-button {
         background: none;
         border: none;
         display: flex;
-        align-items: center;
         cursor: pointer;
-    }
+        align-items: center;
+    }  
+
 
     .default-image { 
         width: 30px;

@@ -33,14 +33,16 @@ export const Container = styled.div`
     pre {
         background-color: ${({ theme }) => theme.bgCode};
         padding: 15px;
-        border: 1px solid ${({ theme }) => theme.codeLine};
-        border-radius: 5px;
+        border-left: 1px solid ${({ theme }) => theme.codeLine};
+        border-right: 1px solid ${({ theme }) => theme.codeLine};
+        border-bottom: 1px solid ${({ theme }) => theme.codeLine};
+        border-radius: 0 0 5px 5px;
         overflow-x: auto;        
         margin-bottom: 24px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        max-width: 614px;
+        align-items: flex-start;
+        max-width: 100%;
     }
 
     pre code {
@@ -48,6 +50,7 @@ export const Container = styled.div`
         font-family: 'Courier New', Courier, monospace;
         font-size: 14px;
         line-height: 1.5;
+        max-width: 90%;
     }
 
     h1 {
