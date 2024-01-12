@@ -3,6 +3,7 @@ import StyledComponentsRegistry from './registry'
 import GlobalStyles, { lightTheme, darkTheme} from '../styles/globals';
 import { ThemeProvider } from 'styled-components';
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -39,6 +40,7 @@ export default function RootLayout({
             }
           </button>
           {children}
+          <Analytics />
         </StyledComponentsRegistry>
       </ThemeProvider>
       </body>
