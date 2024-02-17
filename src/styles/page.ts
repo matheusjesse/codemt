@@ -45,7 +45,6 @@ export const ContainerPage = styled.main`
    .card-section {
     max-width: 624px;
     padding-top: 84px;
-    background: ${({ theme }) => theme.bgColor};
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

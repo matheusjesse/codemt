@@ -12,7 +12,7 @@ export const mainFont = {
 }
 
 export const lightTheme = {
-  bgColor: '#FAF3E0',
+  bgColor: '#FFFDF8',
   text: '#0E1311',
   highLight: '#0EB88B',
   bgTutorial: '#fff',
@@ -24,7 +24,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  bgColor: '#3b3838',
+  bgColor: '#15171A',
   text: '#f8f6f0',
   highLight: '#5327B1',
   bgTutorial: '#0f0e0e',
