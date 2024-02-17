@@ -1,0 +1,174 @@
+import Header from '@/components/Header'
+import Banner from '@/components/Banner'
+import ClipBoard from '@/components/ClipBoard'
+
+export const metadata = {
+  author: 'Matheus',
+  date: '16/02/2024'
+}
+
+<Header />
+<Banner title="Criando um projeto Blazor e configurando o tailwind" subtitle="Criando um projeto blazor do zero e fazendo a instalação e configuração do tailwind com Blazorise"/>
+<div className="content-body"> 
+
+# Criando projeto Blazor e instalando o Tailwind
+
+## Para este tutorial, você precisará do SDK do .NET 8. Entre no link abaixo para saber como instalar:
+
+Link para guia de instalação do SDK [Microsoft](https://learn.microsoft.com/pt-br/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website).
+
+## Iniciando um projeto Blazor
+
+<ClipBoard codeText={`dotnet new blazor -o "tarefas-app"
+
+`} />
+
+>Remova as aspas e o texto dentro delas e digite o nome que deseja dar ao seu projeto. Ao usar este comando, seu projeto Blazor será criado.
+
+## Entre na pasta do seu projeto e digite o comando a seguir para iniciar seu projeto e verificar se tudo deu certo.
+
+<ClipBoard codeText={`dotnet watch
+
+`} />
+
+# Agora, para configurar o tailwind no blazor 
+
+## Instale um provedor de Tailwind para Blazorise.
+
+<ClipBoard codeText={`dotnet add package Blazorise.Tailwind
+
+`} />
+
+## Você também precisa instalar o pacote de ícones.
+
+<ClipBoard codeText={`dotnet add package Blazorise.Icons.FontAwesome
+
+`} />
+
+## Adicione as seguintes informações ao HEAD do seu HTML, dentro da pasta Pages, no arquivo App.razor:
+
+<ClipBoard codeText={`<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="_content/Blazorise.Tailwind/blazorise.tailwind.config.js?v=1.4.2.0"></script>
+
+<link href="_content/Blazorise/blazorise.css" rel="stylesheet" />
+<link href="_content/Blazorise.Tailwind/blazorise.tailwind.css" rel="stylesheet" />
+
+`} />
+
+## Dentro do mesmo arquivo, no BODY do HTML, adicione as seguintes informações antes do script padrão do Blazor:
+
+<ClipBoard codeText={`<script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+`} />
+
+## Ainda dentro da pasta de componentes, no arquivo _Imports.razor, adicione a seguinte informação:
+
+<ClipBoard codeText={`@using Blazorise
+
+`} />
+
+## Adicione o seguinte código ao seu arquivo Program.cs:
+
+<ClipBoard codeText={`using Blazorise;
+	using Blazorise.Tailwind;
+	using Blazorise.Icons.FontAwesome;
+	
+	builder.Services
+	    .AddBlazorise()
+	    .AddTailwindProviders()
+	    .AddFontAwesomeIcons();
+
+`} />
+
+## Seu arquivo Program.cs deve ficar parecido com isso:
+
+<ClipBoard codeText={`using Blazorise;
+
+using Blazorise.Tailwind;
+
+using Blazorise.Icons.FontAwesome;
+
+using tarefas_app.Components;
+
+  
+
+var builder = WebApplication.CreateBuilder(args);
+
+  
+
+// Add services to the container.
+
+builder.Services.AddRazorComponents()
+
+    .AddInteractiveServerComponents();
+
+  
+
+// Configure Blazorise
+
+builder.Services
+
+    .AddBlazorise()
+
+    .AddTailwindProviders()
+
+    .AddFontAwesomeIcons();
+
+  
+
+var app = builder.Build();
+
+  
+
+// Configure the HTTP request pipeline.
+
+if (!app.Environment.IsDevelopment())
+
+{
+
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+
+    app.UseHsts();
+
+}
+
+  
+
+app.UseHttpsRedirection();
+
+  
+
+app.UseStaticFiles();
+
+app.UseAntiforgery();
+
+  
+
+app.MapRazorComponents<App>()
+
+    .AddInteractiveServerRenderMode();
+
+  
+
+app.Run();
+
+`} />
+
+## Se tudo ocorreu conforme o esperado, você conseguirá usar o Tailwind diretamente na classe da tag HTML.
+
+## Referências usadas nesse tutorial
+
+[Blazor](https://dotnet.microsoft.com/pt-br/apps/aspnet/web-apps/blazor)
+
+[Blazorise](https://blazorise.com/docs)
+> Autor: matheus 
+
+> Data: 16/02/2024
+</div>
+

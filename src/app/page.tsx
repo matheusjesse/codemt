@@ -7,6 +7,9 @@ export default function Home() {
   const gitHubGuideText = "Como instalar o git no seu computador, criar chave SSH e linkar com sua conta no github."
   const urlPathNextStyledComponents = '/posts/nextstyledcomponents';
   const StyledGuideText = "Como Iniciar um projeto Next.js com Styled-Components e TypeScript"
+  const urlPathBlazorTailwind = "/posts/blazortailwind";
+  const blazortailwindText = "Como Iniciar um projeto Blazor e instalar o Tailwind"
+
   return (
     <ContainerPage>
       <Header />
@@ -20,6 +23,7 @@ export default function Home() {
       <section className='card-section'>
         <Card url={urlPathGitConfig} title="Git Hub" tags={["git", "linux"]} text={gitHubGuideText}/>
         <Card url={urlPathNextStyledComponents} title="Styled-Components" tags={["Next.js", "Styled-Components", "TypeScript"]} text={StyledGuideText}/>
+        <Card url={urlPathBlazorTailwind} title="Blazor" tags={["Blazor", "TailWind"]} text={blazortailwindText}/>
       </section>
     </ContainerPage>
   )
