@@ -20,13 +20,17 @@ export const BannerContainer = styled.div`
         font-family: 'Lexend', sans-serif;
         font-size: 3.7em;
         color: #faf3e0;
-        @media screen and (max-width: 800px) {
-            margin: 124px 0 0 24px ;
-            font-size: 2em;
-        }
+        
+        
+        
         @media screen and (max-width: 1314px) {        
             font-size: 3em;       
         }
+        @media screen and (max-width: 845px) {
+            margin: 124px 4% 0 10% ;
+            font-size: 2em;
+        }
+       
     }
 
     .banner-sub-title {
@@ -37,8 +41,8 @@ export const BannerContainer = styled.div`
         margin: 24px 20% 0 20%;;
         font-family: 'Lexend', sans-serif;
         color: #faf3e0;
-        @media screen and (max-width: 800px) {
-            margin: 24px 0 0 24px ;
+        @media screen and (max-width: 845px) {
+            margin: 24px 4% 0 10% ;
         }
     }
 `
